@@ -1,6 +1,6 @@
 title: Messages
-modelClass: TheOne74\Telegram\Models\Message
-list: $/theone74/telegram/models/message/columns.yaml
+modelClass: Vdomah\Telegram\Models\Message
+list: $/vdomah/telegram/models/message/columns.yaml
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true

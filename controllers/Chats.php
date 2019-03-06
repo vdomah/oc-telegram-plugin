@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Controllers;
+<?php namespace Vdomah\Telegram\Controllers;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -10,22 +10,22 @@
  
 use Backend\Classes\Controller;
 use BackendMenu;
-use TheOne74\Telegram\Classes\TelegramApi;
+use Vdomah\Telegram\Classes\TelegramApi;
 use \Longman\TelegramBot\Request;
 use \Longman\TelegramBot\Exception\TelegramException;
-use \TheOne74\Telegram\Models\TelegramInfoSettings;
+use \Vdomah\Telegram\Models\TelegramInfoSettings;
 
 class Chats extends Controller
 {
     public $implement = ['Backend\Behaviors\ListController'];
-	public $requiredPermissions = ['theone74.telegram.show.chats'];
+	public $requiredPermissions = ['vdomah.telegram.show.chats'];
 
     public $listConfig = 'config_list.yaml';
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('TheOne74.Telegram', 'main-menu-item', 'side-menu-item3');
+        BackendMenu::setContext('Vdomah.Telegram', 'main-menu-item', 'side-menu-item3');
     }
 
     public function onLoadSendWindow() {
@@ -36,7 +36,7 @@ class Chats extends Controller
     }
 
     public function onSend() {
-        if ( ! $this->user->hasPermission('theone74.telegram.send')) {
+        if ( ! $this->user->hasPermission('vdomah.telegram.send')) {
             throw new \Exception('No permissions');
         }
         $chat_id = post('chat_id');

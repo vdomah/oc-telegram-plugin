@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Models;
+<?php namespace Vdomah\Telegram\Models;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -32,12 +32,12 @@ class Chat extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'theone74_telegram_chat';
+    public $table = 'vdomah_telegram_chat';
 
     public $belongsToMany = [
         'user' => [
-            'TheOne74\Telegram\Models\User',
-            'table'    => 'theone74_telegram_user_chat',
+            'Vdomah\Telegram\Models\User',
+            'table'    => 'vdomah_telegram_user_chat',
         ]
     ];
 

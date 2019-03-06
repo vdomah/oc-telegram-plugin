@@ -1,5 +1,5 @@
 {
-    "name": "theone74/telegram",
+    "name": "vdomah/telegram",
     "description": "Telegram bot api implementation",
 	"repositories": [
         {
@@ -8,7 +8,7 @@
 				"name": "longman/php-telegram-bot",
 				"version":"0.35",
 				"source": {
-					"url": "https://github.com/theone74/php-telegram-bot.git",
+					"url": "https://github.com/vdomah/oc-telegrambot-plugin",
 					"type": "git",
 					"reference":"master"
 				}
@@ -22,13 +22,17 @@
     },
 	"autoload": {
         "psr-4": {
-            "Longman\\TelegramBot\\": "vendor/longman/php-telegram-bot/src/"
+            "Longman\\TelegramBot\\": "../../../vendor/longman/php-telegram-bot/src/"
         }
     },
     "authors": [
         {
             "name": "Anton Romanov",
             "email": "iam@theone74.ru"
+        },
+        {
+          "name": "Artem Rybachuk",
+          "email": "alchemistt@ukr.net"
         }
     ]
 }

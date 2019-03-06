@@ -32,7 +32,7 @@ Follow this [steps](https://core.telegram.org/bots#6-botfather) to create bot an
 Use plugin to send notification over telegram. To do that:
 
 * Configure telegram bot account in the backend panel, go to Settings -> Telegram -> Bot settings
-* Add at the top of your controller or page code `use \TheOne74\Telegram\Classes\TelegramApi;`
+* Add at the top of your controller or page code `use \Vdomah\Telegram\Classes\TelegramApi;`
 * Get your `chat_id` from Telegram -> Chats
 * Send message with 
 ```

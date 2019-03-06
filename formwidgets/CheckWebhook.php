@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\FormWidgets;
+<?php namespace Vdomah\Telegram\FormWidgets;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -10,7 +10,7 @@
  
 use Backend\Classes\FormWidgetBase;
 use \Longman\TelegramBot\Request;
-use \TheOne74\Telegram\Classes\TelegramApi;
+use \Vdomah\Telegram\Classes\TelegramApi;
 
 /**
  * Backend form widget for check webhook

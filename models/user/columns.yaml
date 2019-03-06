@@ -1,27 +1,27 @@
 columns:
     id:
-        label: 'theone74.telegram::lang.lists.id'
+        label: 'vdomah.telegram::lang.lists.id'
         type: number
         searchable: true
         sortable: true
     name:
-        label: 'theone74.telegram::lang.lists.name'
+        label: 'vdomah.telegram::lang.lists.name'
         type: text
         searchable: true
         sortable: true
         select: 'concat(IFNULL(first_name, ''''), '' '', IFNULL(last_name,''''))'
     username:
-        label: 'theone74.telegram::lang.lists.username'
+        label: 'vdomah.telegram::lang.lists.username'
         type: text
         searchable: false
         sortable: false
     created_at:
-        label: 'theone74.telegram::lang.lists.created_at'
+        label: 'vdomah.telegram::lang.lists.created_at'
         type: datetime
         searchable: false
         sortable: true
     upated_at:
-        label: 'theone74.telegram::lang.lists.upated_at'
+        label: 'vdomah.telegram::lang.lists.upated_at'
         type: datetime
         searchable: false
         sortable: true

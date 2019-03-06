@@ -1,5 +1,5 @@
-list: $/theone74/telegram/models/chat/columns.yaml
-modelClass: TheOne74\Telegram\Models\Chat
+list: $/vdomah/telegram/models/chat/columns.yaml
+modelClass: Vdomah\Telegram\Models\Chat
 title: Chats
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

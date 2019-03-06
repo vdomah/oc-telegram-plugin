@@ -1,6 +1,6 @@
 title: Users
-modelClass: TheOne74\Telegram\Models\User
-list: $/theone74/telegram/models/user/columns.yaml
+modelClass: Vdomah\Telegram\Models\User
+list: $/vdomah/telegram/models/user/columns.yaml
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true

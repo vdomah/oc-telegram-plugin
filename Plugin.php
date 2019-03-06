@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram;
+<?php namespace Vdomah\Telegram;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -9,7 +9,7 @@
  */
 
 use System\Classes\PluginBase;
-use TheOne74\Telegram\Classes\RegisterWidgets;
+use Vdomah\Telegram\Classes\RegisterWidgets;
 
 class Plugin extends PluginBase
 {
@@ -21,14 +21,14 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'theone74.telegram::lang.settings.page_name',
-                'description' => 'theone74.telegram::lang.settings.page_desc',
-                'category'    => 'theone74.telegram::lang.plugin.name',
+                'label'       => 'vdomah.telegram::lang.settings.page_name',
+                'description' => 'vdomah.telegram::lang.settings.page_desc',
+                'category'    => 'vdomah.telegram::lang.plugin.name',
                 'icon'        => 'icon-paper-plane',
-                'class'       => 'TheOne74\Telegram\Models\TelegramInfoSettings',
+                'class'       => 'Vdomah\Telegram\Models\TelegramInfoSettings',
                 'order'       => 500,
                 'keywords'    => 'telegram bot',
-                'permissions' => ['theone74.telegram.settings']
+                'permissions' => ['vdomah.telegram.settings']
             ]
         ];
     }
@@ -36,12 +36,12 @@ class Plugin extends PluginBase
     public function registerFormWidgets()
     {
         return [
-            'TheOne74\Telegram\FormWidgets\TelegramChat' => [
+            'Vdomah\Telegram\FormWidgets\TelegramChat' => [
                 'label' => 'Telegram Chat',
                 'code'  => 'telechat',
                 'alias'  => 'telechat',
             ],
-            'TheOne74\Telegram\FormWidgets\CheckWebhook' => [
+            'Vdomah\Telegram\FormWidgets\CheckWebhook' => [
                 'label' => 'Telegram check webhook button',
                 'code'  => 'checkwebhook',
                 'alias'  => 'checkwebhook',

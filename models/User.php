@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Models;
+<?php namespace Vdomah\Telegram\Models;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -32,9 +32,10 @@ class User extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'theone74_telegram_user';
+    public $table = 'vdomah_telegram_user';
 
-	function getUsernameStrAttribute() { 
+	function getUsernameStrAttribute()
+    {
 		$name = $this->id;
 		if (($this->username)) {
 			$name = $this->username;

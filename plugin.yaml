@@ -1,51 +1,51 @@
 plugin:
-    name: 'theone74.telegram::lang.plugin.name'
-    description: 'theone74.telegram::lang.plugin.description'
-    author: 'Anton R'
+    name: 'vdomah.telegram::lang.plugin.name'
+    description: 'vdomah.telegram::lang.plugin.description'
+    author: 'Art Gek'
     icon: icon-paper-plane-o
     homepage: ''
 navigation:
     main-menu-item:
-        label: 'theone74.telegram::lang.plugin.name'
-        url: theone74/telegram/users
+        label: 'vdomah.telegram::lang.plugin.name'
+        url: vdomah/telegram/users
         icon: icon-paper-plane
         permissions:
-            - theone74.telegram.show
+            - vdomah.telegram.show
         sideMenu:
             side-menu-item:
-                label: 'theone74.telegram::lang.left_menu.users'
-                url: theone74/telegram/users
+                label: 'vdomah.telegram::lang.left_menu.users'
+                url: vdomah/telegram/users
                 icon: icon-user
                 permissions:
-                    - theone74.telegram.show.users
+                    - vdomah.telegram.show.users
             side-menu-item2:
-                label: 'theone74.telegram::lang.left_menu.messages'
-                url: theone74/telegram/messages
+                label: 'vdomah.telegram::lang.left_menu.messages'
+                url: vdomah/telegram/messages
                 icon: icon-file-text
                 permissions:
-                    - theone74.telegram.show.messages
+                    - vdomah.telegram.show.messages
             side-menu-item3:
-                label: 'theone74.telegram::lang.left_menu.chats'
-                url: theone74/telegram/chats
+                label: 'vdomah.telegram::lang.left_menu.chats'
+                url: vdomah/telegram/chats
                 icon: icon-comments
                 permissions:
-                    - theone74.telegram.show.chats
+                    - vdomah.telegram.show.chats
 permissions:
-    theone74.telegram.show.users:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.show.users:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Show users'
-    theone74.telegram.show.chats:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.show.chats:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Show chats'
-    theone74.telegram.show.messages:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.show.messages:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Show messages'
-    theone74.telegram.show:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.show:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Show plugin'
-    theone74.telegram.send:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.send:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Send messages'
-    theone74.telegram.settings:
-        tab: 'theone74.telegram::lang.plugin.name'
+    vdomah.telegram.settings:
+        tab: 'vdomah.telegram::lang.plugin.name'
         label: 'Manage settings'

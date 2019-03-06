@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Classes;
+<?php namespace Vdomah\Telegram\Classes;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *

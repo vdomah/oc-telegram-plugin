@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Commands;
+<?php namespace Vdomah\Telegram\Commands;
 /**
  * This file is part of the TelegramBot package.
  *

@@ -8,10 +8,10 @@
  * (c) Anton Romanov <iam+octobercms@theone74.ru>
  */
  
-use TheOne74\Telegram\Classes\TelegramApi;
+use Vdomah\Telegram\Classes\TelegramApi;
 use \Longman\TelegramBot\Request;
 use \Longman\TelegramBot\Exception\TelegramException;
-use \TheOne74\Telegram\Models\TelegramInfoSettings;
+use \Vdomah\Telegram\Models\TelegramInfoSettings;
 
 
 Route::post('/telehook/{token}', array(function($token){

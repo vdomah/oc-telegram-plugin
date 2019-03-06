@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Models;
+<?php namespace Vdomah\Telegram\Models;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -11,8 +11,8 @@
 use Model;
 use Flash;
 use Config;
-use TheOne74\Telegram\Classes\TelegramApi;
-use TheOne74\Telegram\Models\User;
+use Vdomah\Telegram\Classes\TelegramApi;
+use Vdomah\Telegram\Models\User;
 
 /**
  * TelegramInfoSettings Model
@@ -24,7 +24,7 @@ class TelegramInfoSettings extends Model
 	public $implement = ['System.Behaviors.SettingsModel'];
 
 	// 	A unique code
-	public $settingsCode = 'theone74_telegram_info';
+	public $settingsCode = 'vdomah_telegram_info';
 
 	// 	Reference to field configuration
 	public $settingsFields = 'fields.yaml';
@@ -38,10 +38,11 @@ class TelegramInfoSettings extends Model
     ];
 
 	public $customMessages = [
-		'cert_path.required_with_all' => 'theone74.telegram::lang.error.cert_path_required'
+		'cert_path.required_with_all' => 'vdomah.telegram::lang.error.cert_path_required'
 	];
 
-	function unparse_url($parsed_url) {
+	function unparse_url($parsed_url)
+    {
 		$scheme   = isset($parsed_url['scheme']) ? $parsed_url['scheme'] . '://' : '';
 		$host     = isset($parsed_url['host']) ? $parsed_url['host'] : '';
 		$port     = isset($parsed_url['port']) ? ':' . $parsed_url['port'] : '';
@@ -54,10 +55,12 @@ class TelegramInfoSettings extends Model
 		return "$scheme$user$pass$host$port$path$query$fragment";
 	}
 
-	function afterSave() {
-
-		$url = parse_url(Config::get('app.url'));
+	function afterSave()
+    {
+		$url = parse_url(config('app.url'));
 		$url['scheme'] = 'https';
+		if (!isset($url['path']))
+            $url['path'] = '';
 		$url['path'] .= '/telehook/'.$this->get('token');
 		$url = $this->unparse_url($url);
 

@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Classes;
+<?php namespace Vdomah\Telegram\Classes;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -54,7 +54,7 @@ class RegisterWidgets {
             ControlLibrary::GROUP_WIDGETS,
             'icon-paper-plane-o',
             $this->controlLibrary->getStandardProperties($ignoreProperties, $properties),
-            'TheOne74\Telegram\Classes\WidgetDesignTimeProvider'
+            'Vdomah\Telegram\Classes\WidgetDesignTimeProvider'
         );
     }
 }

@@ -1,4 +1,4 @@
-<?php namespace TheOne74\Telegram\Classes;
+<?php namespace Vdomah\Telegram\Classes;
 /**
  * This file is part of the Telegram plugin for OctoberCMS.
  *
@@ -8,12 +8,11 @@
  * (c) Anton Romanov <iam+octobercms@theone74.ru>
  */
  
-use \TheOne74\Telegram\Models\TelegramInfoSettings;
+use \Vdomah\Telegram\Models\TelegramInfoSettings;
 use \Longman\TelegramBot\Exception\TelegramException;
 use \Longman\TelegramBot\Request;
 
-class TelegramApi
-extends \Longman\TelegramBot\Telegram
+class TelegramApi extends \Longman\TelegramBot\Telegram
 {
 
     public static $_instance;
@@ -23,7 +22,7 @@ extends \Longman\TelegramBot\Telegram
 	public function __construct($api_key, $bot_name)
 	{
 		parent::__construct($api_key, $bot_name);
-		$this->addCommandsPathMy(plugins_path('theone74/telegram/commands'), 'TheOne74\\Telegram\\Commands');
+		$this->addCommandsPathMy(plugins_path('vdomah/telegram/commands'), 'Vdomah\\Telegram\\Commands');
 		if ((TelegramInfoSettings::instance()->get('db_encoding'))) {
 			self::$_encoding = TelegramInfoSettings::instance()->get('db_encoding');
 		}
@@ -98,7 +97,7 @@ extends \Longman\TelegramBot\Telegram
                 'password'  => \Config::get('database.connections.mysql.password'),
             ];
             // TODO
-            self::$_instance->enableMySQL($mysql_credentials, 'theone74_telegram_', self::$_encoding);
+            self::$_instance->enableMySQL($mysql_credentials, 'vdomah_telegram_', self::$_encoding);
 
 			// batan.io
 			if ($token = TelegramInfoSettings::instance()->get('botan_token')){
@@ -108,7 +107,7 @@ extends \Longman\TelegramBot\Telegram
 			// enable admins
 			$admins = [];
 			foreach(TelegramInfoSettings::instance()->get('admins') as $i) {
-				$admins[] = intval($i['admin']);
+				$admins[] = $i['admin'];
 			}
 			self::$_instance->enableAdmins($admins);
         }
